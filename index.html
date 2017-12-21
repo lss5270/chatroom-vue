@@ -2,47 +2,14 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <title>ipr</title>
-  </head>
-  <body class="">
-    <div id="app" v-cloak></div>
-    <!-- built files will be auto injected -->
-  <script>
-    // var _common = {
-    //   store : {
-    //     getLocalStorage: function(){
-    //       if(typeof localStorage=='object'){
-    //         return localStorage;
-    //       }else if(typeof globalStorage=='object'){
-    //         return globalStorage[location.host];
-    //       }else{
-    //         return null;
-    //       }
-    //     },
-    //     get: function(name){
-    //       var localStorage=_common.store.getLocalStorage();
-    //       var value = null;
-    //       if(localStorage){
-    //         value=localStorage[name];
-    //       }
-    //       return !!value?eval("("+value+")"):"";
-    //     },
-    //     set: function(name,value){
-    //       var localStorage=_common.store.getLocalStorage();
-    //       if(localStorage){
-    //         localStorage[name]=JSON.stringify(value);
-    //       }
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>my-project</title>
 
-    //     },
-    //     del: function(name){
-    //       var localStorage=_common.store.getLocalStorage();
-    //       if(localStorage){
-    //         localStorage.removeItem(name);
-    //       }
-    //     }
-    //   }
-    // };
-  </script>
+    <script src="https://cdn.bootcss.com/socket.io/2.0.4/socket.io.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/1.8.1/jquery.js"></script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
   </body>
 </html>

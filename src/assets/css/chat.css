@@ -1,0 +1,62 @@
+/*公共样式*/
+*{padding:0; margin:0;}
+html,body{width:100%;height: 100%;}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+.clearfix{*zoom:1}
+.cred{color:#f03e3e;}
+.cgreen{color:#459d36;}
+.hide{display:none;}
+.fr{float:right;}
+.fl{float: left;}
+.rela{position: relative;}
+.abs{position:absolute;}
+h1{position: fixed; z-index:20; width: 100%; height:50px; line-height:50px; font-size:20px; left: 0; top: 0; background: #000; color: #fff;}
+
+/*登录界面*/
+.login-wrap{background:#e7e7e7;width:100%;height:100%; text-align:center;}
+.login-con{padding-top: 50px;}
+.login-con h3{margin-bottom: 20px;}
+.login-con input{width:60%; display:block; margin:0 auto; height: 40px; line-height: 40px; margin-bottom: 20px;}
+.login-con button{width:60%;display:block; margin:0 auto; height: 40px; line-height:40px; border:none; background:#459d36; color:#fff; border-radius:5px;}
+
+/*聊天界面*/
+.chat-wrap{width: 100%; height: 100%;overflow-y:auto; background:#e7e7e7; text-align:center;}
+.chat-con{padding: 50px 0 70px; background:#e7e7e7;}
+.chat-con p{display:inline-block; padding:5px 10px; background:#999;border-radius:5px; color:#fff; margin:5px 0;}
+.bottom{position:fixed;bottom:0; left: 0; width:100%; height: 50px; background: #fff;}
+.bottom input{width: 78%; height: 50px; line-height: 50px; float:left;border:none;}
+.bottom button{width: 20%;height: 50px; float: right; border:none; background:#459d36;color: #fff;}
+.chat-item{width:100%; margin-top:20px;}
+.item-right .message{background: #62b900;position: relative;}
+.item-left .message{background: #fff; margin-top:20px; position: relative;}
+.item-left .img{margin-right:10px;}
+.item-left .uname{font-size:12px; left:50px; top:0;}
+.chat-item .message{width:60%;display:block; padding:10px;border-radius:5px; margin-right:10px;}
+.chat-item .img{display:inline-block; width:40px; height:40px; background:url(../img/user.jpg) no-repeat; background-size:100% 100%;}
+
+.item-right .message::after {
+	content: "";
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    right: -14px;
+    top: 7px;
+    border-width: 8px;
+    border-style: solid;
+    border-color: transparent transparent transparent rgb(98, 185, 0);
+    border-image: initial;
+}
+.item-left .message::before {
+	content: "";
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    left: -13px;
+    top: 6px;
+    border-width: 8px;
+    border-style: solid;
+    border-color: transparent rgb(255, 255, 255) transparent transparent;
+    border-image: initial;
+}
+
+
