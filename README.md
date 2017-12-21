@@ -1,5 +1,5 @@
 # chatroom-vue
-聊天室。基于vue和node+Express + Socket.IO
+多人聊天室。基于vue和node+Express + Socket.IO。更多功能正在开放中……
 
 ## 如何运行
 下载项目
