@@ -31,7 +31,7 @@ h1{position: fixed; z-index:20; width: 100%; height:50px; line-height:50px; font
 .item-left .message{background: #fff; margin-top:20px; position: relative;}
 .item-left .img{margin-right:10px;}
 .item-left .uname{font-size:12px; left:50px; top:0;}
-.chat-item .message{width:60%;display:block; padding:10px;border-radius:5px; margin-right:10px;}
+.chat-item .message{max-width:60%;display:block; padding:10px;border-radius:5px; margin-right:10px; text-align: justify;}
 .chat-item .img{display:inline-block; width:40px; height:40px; background:url(../img/user.jpg) no-repeat; background-size:100% 100%;}
 
 .item-right .message::after {

@@ -35,7 +35,7 @@ io.on('connection', function (socket) {
 
 
 	        let resdata = {
-	        	username: data.username,	/*发送方用户名*/
+	        	//username: data.username,	/*发送方用户名*/
 	        	msgType: 0, 	/*信息类型：0为系统消息，1为客户端消息*/
 	        	msgDate:  new Date(), 	/*植入服务器时间*/
 	        	message: '系统消息：'+data.username+'已加入群聊',
@@ -43,10 +43,8 @@ io.on('connection', function (socket) {
 	        }
 	        
 	        /*登录成功*/
-	        socket.emit('loginSuccess',resdata);
-	        /*人数变更，广播给所有连接用户*/
-	        console.log('当前链接的用户为：',users);
-	        io.sockets.emit('amountChange',users.length);
+	        socket.emit('loginSuccess',{username:data.username});
+	        
 	        /*向所有连接的客户端广播add事件*/
 	         io.sockets.emit('receiveMessage',resdata);
 
@@ -55,6 +53,10 @@ io.on('connection', function (socket) {
 
 	        /*给除了自己以外的客户端广播消息 2017-12-20*/
 	        // socket.broadcast.emit('add',resdata);
+
+	        /*人数变更，广播给所有连接用户*/
+	        console.log('当前链接的用户为：',users);
+	        io.sockets.emit('amountChange',users.length);
 	    }else{
 	    	/*登录失败*/
 	        socket.emit('loginFail','');
@@ -63,9 +65,15 @@ io.on('connection', function (socket) {
 
 	/*监听发送消息*/
 	socket.on('sendMessage',function(data){
-		//植入服务器时间。此处可存聊天记录表中
-		data.msgDate = new Date();
-        io.sockets.emit('receiveMessage',data);
+		let resdata = {
+			username: username,		/*发送方用户名*/
+			msgType: 1, 			/*信息类型：0为系统消息，1为客户端消息*/
+			msgDate:  new Date(), 	/*植入服务器时间*/
+			message: data.message,
+
+		}
+		
+        io.sockets.emit('receiveMessage',resdata);
     })
 
 	/*退出登录*/

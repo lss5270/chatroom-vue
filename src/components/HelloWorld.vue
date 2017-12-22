@@ -3,7 +3,7 @@
         <div class="login-wrap" v-if="!isCheckin">
           <div class="login-con">
             <h3>用户登录</h3>
-            <input type="text" placeholder="请输入昵称" id="loginName" v-model.trim="uname">
+            <input type="text" placeholder="请输入昵称" id="loginName" v-model.trim="uname" @keyup.13="login">
             <button class="login-btn" @click="login">登录</button>
           </div>
         </div>
