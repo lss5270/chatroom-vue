@@ -55,7 +55,7 @@ io.on('connection', function (socket) {
 	        // socket.broadcast.emit('add',resdata);
 
 	        /*人数变更，广播给所有连接用户*/
-	        console.log('当前链接的用户为：',users);
+	        console.log('当前连接的用户为：',users);
 	        io.sockets.emit('amountChange',users.length);
 	    }else{
 	    	/*登录失败*/
@@ -99,7 +99,7 @@ io.on('connection', function (socket) {
           	users.splice(index,1);
         }
         /*人数变更，广播给所有连接用户*/
-        console.log('当前链接的用户为：',users);
+        console.log('当前连接的用户为：',users);
         io.sockets.emit('amountChange',users.length);
 
         

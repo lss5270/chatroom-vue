@@ -25,6 +25,7 @@
 
 ## 效果图
  <p align="center">
-  <img width="900" src="https://raw.githubusercontent.com/lss5270/chatroom-vue/master/gifs/view.jpg">
+  <img width="900" src="https://raw.githubusercontent.com/lss5270/chatroom-vue/master/gifs/view1.jpg">
+  <img  src="https://raw.githubusercontent.com/lss5270/chatroom-vue/master/gifs/view2.jpg">
 </p>
 
