@@ -78,10 +78,9 @@ export default {
       console.log('接收到服务端返回：',data)
       vm.msgList.push(data);
 
-      //window.scrollTo(0, document.body.scrollHeight);
-      document.getElementById('chat_con').scrollTo(0, document.getElementById('chat_con').scrollHeight);
+      window.scrollTo(0, document.getElementById('chat_con').scrollHeight);
       
-      console.log('----',document.getElementById('chat_con').scrollHeight)
+      //console.log('----',document.getElementById('chat_con').scrollHeight)
 
       
     })
@@ -89,15 +88,13 @@ export default {
     /*新人加入提示*/
     // vm.socket.on('add',function(data){
     //   console.log(data)
-    //   var html = '<p>'+data.message+'</p><br/>';
-    //   $('.chat-con').append(html);
+  
     // })
     /*退出群聊提示*/
     // vm.socket.on('leave',function(name){
     //   console.log('退出===',name)
     //   if(name != null){
-    //     var html = '<p>FBI warning:'+name+'已退出群聊</p><br/>';
-    //     $('.chat-con').append(html);
+   
     //   }
     // })
 
@@ -114,8 +111,7 @@ export default {
     /*登录*/
     login:function(){
       var vm = this;
-      
-      // vm.uname = $.trim($('#loginName').val());
+
       if(vm.uname){
         /*向服务端发送登录事件*/
         vm.socket.emit('login',{username:vm.uname})

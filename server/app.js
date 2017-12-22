@@ -90,9 +90,7 @@ io.on('connection', function (socket) {
         io.sockets.emit('receiveMessage',resdata);
 
         console.log('退出===',username)
-        /*人数变更，广播给所有连接用户*/
-        console.log('当前链接的用户为：',users);
-        io.sockets.emit('amountChange',users.length);
+       
 
 		/*向所有连接的客户端广播leave事件*/
       	io.sockets.emit('leave',username);
@@ -100,7 +98,11 @@ io.on('connection', function (socket) {
         if(val.username === username){
           	users.splice(index,1);
         }
+        /*人数变更，广播给所有连接用户*/
+        console.log('当前链接的用户为：',users);
+        io.sockets.emit('amountChange',users.length);
 
+        
       })
     })
 })
