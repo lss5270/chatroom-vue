@@ -22,3 +22,9 @@
  npm run dev
 ```
 
+
+## 效果图
+ <p align="center">
+  <img width="900" src="https://raw.githubusercontent.com/lss5270/chatroom-vue/master/gifs/view.jpg">
+</p>
+
