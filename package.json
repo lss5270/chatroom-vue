@@ -7,6 +7,7 @@
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "server": "node server/app.js",
+    "pm2": "pm2 start server/app.js --watch  > server/log/app.log",
     "start": "npm run dev",
     "unit": "jest --config test/unit/jest.conf.js --coverage",
     "e2e": "node test/e2e/runner.js",
@@ -15,6 +16,7 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "pm2": "^2.9.1",
     "socket.io": "^2.0.4",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"

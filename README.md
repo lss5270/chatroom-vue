@@ -21,7 +21,11 @@
 ```
  npm run dev
 ```
-
+## 关于进程守护
+如果服务端需要进程守护，把启动命令从npm run server替换成以下命令即可。（确保全局安装过pm2：npm install pm2 -g）
+```
+ npm run pm2
+```
 
 ## 效果图
  <p align="center">

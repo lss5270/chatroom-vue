@@ -66,7 +66,7 @@ io.on('connection', function (socket) {
 	/*监听发送消息*/
 	socket.on('sendMessage',function(data){
 		let resdata = {
-			username: username,		/*发送方用户名*/
+			username: data.username,		/*发送方用户名*/
 			msgType: 1, 			/*信息类型：0为系统消息，1为客户端消息*/
 			msgDate:  new Date(), 	/*植入服务器时间*/
 			message: data.message,
@@ -74,6 +74,7 @@ io.on('connection', function (socket) {
 		}
 		
         io.sockets.emit('receiveMessage',resdata);
+        console.log('接受到信息======:',resdata)
     })
 
 	/*退出登录*/
