@@ -7,7 +7,7 @@
  git clone https://github.com/lss5270/chatroom-vue.git
 ```
 
-打开一个终端（称这个终端为B终端）进入到chatroom-vue目录安装依赖包
+进入到chatroom-vue目录安装依赖包
 ```
  npm install
 ```
@@ -17,7 +17,7 @@
  npm run server
 ```
 
-启动前端开发服务，在chatroom-vue目录里执行以下命令，成功执行后，在浏览器输入访问地址`http://localhost:8080`
+另起窗口（注意：是另起窗口！），启动前端开发服务（称这个终端为B终端），在chatroom-vue目录里执行以下命令，成功执行后，在浏览器输入访问地址`http://localhost:8080`
 ```
  npm run dev
 ```
